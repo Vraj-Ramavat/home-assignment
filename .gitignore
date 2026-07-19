@@ -1,0 +1,10 @@
+# Arduino/ESP32 compilation artifacts
+*.hex
+*.elf
+*.bin
+*.d
+*.o
+
+# Build directories
+build/
+Build/

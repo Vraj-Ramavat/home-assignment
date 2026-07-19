@@ -52,3 +52,8 @@
 
 ## Bonus Implemented
 Daily max/min tracker using `millis()`, shown on OLED on a rotating page.
+
+## Demo Video
+The demo video link for this project is:
+- [Google Docs Demo Video Link](https://docs.google.com/document/d/16FluyBkVb70zNfUl3FhwSKrU-X1en0yS2nnmOrMLoH4/edit?usp=sharing)
+

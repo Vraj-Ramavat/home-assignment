@@ -81,11 +81,9 @@ void loop() {
     digitalWrite(RED_LED, alert ? HIGH : LOW);
     digitalWrite(GREEN_LED, alert ? LOW : HIGH);
     if (alert) {
-      if (alert) {
-  tone(BUZZER_PIN, 2000);   // 2000 Hz tone — try 2000-4000 to find loudest
-  delay(1000);               // required 1s alert beep (only path using delay)
-  noTone(BUZZER_PIN);
-}
+      tone(BUZZER_PIN, 2000);   // 2000 Hz tone — try 2000-4000 to find loudest
+      delay(1000);               // required 1s alert beep (only path using delay)
+      noTone(BUZZER_PIN);
     }
 
     // Cycle display: main readings, then min/max every other 5s window

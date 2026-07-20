@@ -44,6 +44,15 @@ void handleBuzzer(State s) {
   }
   muted = false;
 
+  static State lastState = SAFE;
+  if (s != lastState) {
+    noTone(BUZZER_PIN); // Stop any playing tone on transition
+    lastState = s;
+    if (s == WARNING) {
+      lastBeep = 0; // Force immediate beep on transition
+    }
+  }
+
   if (s == SAFE) {
     noTone(BUZZER_PIN);
   } else if (s == WARNING) {

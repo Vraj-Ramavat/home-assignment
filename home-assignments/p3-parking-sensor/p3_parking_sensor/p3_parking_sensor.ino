@@ -85,7 +85,16 @@ void loop() {
     beepInterval = 0; // continuous handled separately
   }
 
-  // Buzzer timing - non-blocking
+  // Buzzer timing - non-blocking with transition handling
+  static String lastZone = "";
+  if (zone != lastZone) {
+    noTone(BUZZER_PIN); // Stop any playing tone on transition
+    lastZone = zone;
+    if (zone == "CAUTION" || zone == "CLOSE") {
+      lastBeep = 0; // Force immediate beep on transition
+    }
+  }
+
   if (zone == "DANGER") {
     tone(BUZZER_PIN, 2000); // continuous tone, no duration = stays on
   } else if (beepInterval > 0 && millis() - lastBeep > beepInterval) {

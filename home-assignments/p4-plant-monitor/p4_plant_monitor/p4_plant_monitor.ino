@@ -120,15 +120,13 @@ void loop() {
 
     String soilStatus = moisturePercent < 30 ? "DRY" : (moisturePercent > 70 ? "WET" : "OPTIMAL");
 
-    // Hysteresis (skip while manual override active)
-    if (!manualWater) {
-      if (!pumpOn && moisturePercent < 30) {
-        pumpOn = true;
-        digitalWrite(RELAY1_PIN, PUMP_ON);
-      } else if (pumpOn && moisturePercent > 40) {
-        pumpOn = false;
-        digitalWrite(RELAY1_PIN, PUMP_OFF);
-      }
+    // Hysteresis (always update pumpOn state, but only write to relay if manual override is inactive)
+    if (!pumpOn && moisturePercent < 30) {
+      pumpOn = true;
+      if (!manualWater) digitalWrite(RELAY1_PIN, PUMP_ON);
+    } else if (pumpOn && moisturePercent > 40) {
+      pumpOn = false;
+      if (!manualWater) digitalWrite(RELAY1_PIN, PUMP_OFF);
     }
 
     Serial.print("Soil: "); Serial.print(moisturePercent); Serial.print("% | ");

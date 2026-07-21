@@ -1,0 +1,4 @@
+// Copy this file to config.h and fill in your credentials.
+// config.h itself must be added to .gitignore - never commit real Wi-Fi passwords.
+#define WIFI_SSID     "your_wifi_name"
+#define WIFI_PASSWORD "your_wifi_password"

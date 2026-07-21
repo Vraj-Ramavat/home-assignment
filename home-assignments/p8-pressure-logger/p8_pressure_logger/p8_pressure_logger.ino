@@ -44,6 +44,7 @@ void setup() {
   }
   pinMode(GREEN_LED, OUTPUT);
   pinMode(RED_LED, OUTPUT);
+  analogReadResolution(12);
 
   if (!display.begin(SSD1306_SWITCHCAPVCC)) {
     Serial.println("OLED init failed");

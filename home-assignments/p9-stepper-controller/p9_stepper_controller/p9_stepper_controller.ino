@@ -29,6 +29,7 @@ Adafruit_SSD1306 display(128, 64, &SPI, OLED_DC, OLED_RESET, OLED_CS);
 
 long currentSteps = 0;   // absolute position, can go negative logically but we track 0..STEPS_PER_REV-1 wrap
 long targetSteps = 0;
+String currentDir = "--";
 
 bool lastCW = HIGH, lastCCW = HIGH, lastHome = HIGH;
 
@@ -74,11 +75,17 @@ void loop() {
   float targetAngle = map(potRaw, 0, 1023, 0, 360);
   targetSteps = (long)(targetAngle / 360.0 * STEPS_PER_REV);
 
+  static long lastTargetSteps = -1;
+  bool targetChanged = (targetSteps != lastTargetSteps);
+  if (targetChanged) {
+    lastTargetSteps = targetSteps;
+  }
+
   bool cw = digitalRead(CW_BTN);
   bool ccw = digitalRead(CCW_BTN);
   bool home = digitalRead(HOME_BTN);
 
-  String dir = "--";
+  bool actionTaken = false;
 
   // Latching (push-push) switches: every physical click flips the pin state,
   // so we trigger on ANY change (cw != lastCW) instead of only the falling
@@ -86,22 +93,26 @@ void loop() {
   if (cw != lastCW) {
     myStepper.step(512); // 45 deg
     currentSteps += 512;
-    dir = "CW";
-    updateOLED(dir);
+    currentDir = "CW";
+    actionTaken = true;
     Serial.print("CW step, position: "); Serial.println(currentSteps);
   }
   if (ccw != lastCCW) {
     myStepper.step(-512);
     currentSteps -= 512;
-    dir = "CCW";
-    updateOLED(dir);
+    currentDir = "CCW";
+    actionTaken = true;
     Serial.print("CCW step, position: "); Serial.println(currentSteps);
   }
   if (home != lastHome) {
     currentSteps = 0; // logical home, motor does not move
-    dir = "HOME SET";
-    updateOLED(dir);
+    currentDir = "HOME SET";
+    actionTaken = true;
     Serial.println("Home position set (logical, no movement)");
+  }
+
+  if (actionTaken || targetChanged) {
+    updateOLED(currentDir);
   }
 
   lastCW = cw; lastCCW = ccw; lastHome = home;

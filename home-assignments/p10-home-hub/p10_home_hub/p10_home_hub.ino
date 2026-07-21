@@ -141,6 +141,10 @@
       req->redirect("/");
     });
     server.begin();
+
+    // Force initial sensor reading and automation rule check on boot
+    readSensors();
+    applyAutomationRules();
   }
 
   void readSensors() {

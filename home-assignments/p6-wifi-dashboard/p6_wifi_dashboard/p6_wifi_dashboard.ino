@@ -27,6 +27,7 @@
 Adafruit_SSD1306 display(128, 64, &SPI, OLED_DC, OLED_RESET, OLED_CS);
 
 Adafruit_BMP280 bmp;
+bool bmpOK = false;
 DHTesp dht;
 AsyncWebServer server(80);
 
@@ -81,7 +82,10 @@ void connectWiFi() {
 void setup() {
   Serial.begin(115200);
   Wire.begin(21, 22);
-  bmp.begin(0x76);
+  bmpOK = bmp.begin(0x76);
+  if (!bmpOK) {
+    Serial.println("Could not find a valid BMP280 sensor, check wiring!");
+  }
 
   dht.setup(DHT_PIN, DHTesp::DHT22);
   analogReadResolution(12);
@@ -116,8 +120,13 @@ void loop() {
     TempAndHumidity data = dht.getTempAndHumidity();
     temperature = data.temperature;
     humidity = data.humidity;
-    pressure = bmp.readPressure() / 100.0F;
-    altitude = bmp.readAltitude(1013.25);
+    if (bmpOK) {
+      pressure = bmp.readPressure() / 100.0F;
+      altitude = bmp.readAltitude(1013.25);
+    } else {
+      pressure = 0.0;
+      altitude = 0.0;
+    }
     int raw = analogRead(LDR_PIN);
     lightPercent = map(raw, 0, 4095, 0, 100);
 

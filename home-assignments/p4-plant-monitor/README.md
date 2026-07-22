@@ -22,8 +22,10 @@
 | Soil sensor VCC/GND | —      | 3.3V / GND (never 5V) |
 | Soil sensor AOUT  | Analog   | GPIO34 |
 | DHT22 DATA        | Data     | GPIO4 (10kΩ pull-up to 3.3V) |
-| Relay VCC/GND     | —        | 5V / GND |
-| Relay IN1 (pump)  | Control  | GPIO26 (active-LOW) |
+| Relay DC+ (VCC)   | Power    | 5V (Vin) |
+| Relay DC- (GND)   | Ground   | GND |
+| Relay CH1 (IN1)   | Control  | GPIO26 (active-LOW) |
+| Relay CH2 (IN2)   | Control  | GPIO27 (Unused in P4) |
 | Push button       | one leg  | GPIO0 (INPUT_PULLUP), other leg → GND |
 | OLED D0 (SCK)     | Clock    | GPIO18 |
 | OLED D1 (MOSI)    | Data     | GPIO23 |

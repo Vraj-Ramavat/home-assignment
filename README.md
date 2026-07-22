@@ -2,6 +2,10 @@
 
 This repository contains the completed home assignments submission for the **IIT Jammu Summer School 2026 (IoT & Drones Program)**. Out of the 10 assignments, **8 projects** (including the advanced Capstone Hub) have been successfully built, optimized, documented, and submitted.
 
+* **GitHub Repository**: [Vraj-Ramavat/home-assignment](https://github.com/Vraj-Ramavat/home-assignment)
+* **Google Drive Folder (All Project Videos)**: [Google Drive Videos Folder](https://drive.google.com/drive/folders/11xXk5HcE5a5OeeX7RsooTPi0qlOb1i7U?usp=sharing)
+* **Submission Report (Google Doc Content)**: [`IIT_Jammu_IoT_Submission_Report.md`](IIT_Jammu_IoT_Submission_Report.md)
+
 ---
 
 ## 📂 Submitted Projects Index

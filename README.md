@@ -2,7 +2,13 @@
 
 <div align="center">
 
-**⚡ Complete Multi-Sensor Embedded Systems, Web Dashboards & Capstone Home Automation Hub ⚡**
+[![IIT Jammu Summer School 2026](https://img.shields.io/badge/IIT%20Jammu-Summer%20School%202026-blueviolet?style=for-the-badge&logo=education)](#)
+[![Author](https://img.shields.io/badge/Author-Vraj%20Ramavat-orange?style=for-the-badge&logo=github)](https://github.com/Vraj-Ramavat)
+[![Hardware](https://img.shields.io/badge/Hardware-ESP32%20%7C%20Arduino%20Uno-00979D?style=for-the-badge&logo=arduino)](#)
+[![Status](https://img.shields.io/badge/Status-Completed%20%26%20Submitted-success?style=for-the-badge&logo=checkmarx)](#)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](#)
+
+### ⚡ Complete Multi-Sensor Embedded Systems, Web Dashboards & Capstone Home Automation Hub ⚡
 
 [Explore Projects](#-projects-index) • [Capstone Hub](#-capstone-full-iot-home-automation-hub-p10) • [Hardware Setup](#-technical-innovations--engineering-highlights) • [Submission Compliance](#-submission-guidelines-compliance-checklist)
 

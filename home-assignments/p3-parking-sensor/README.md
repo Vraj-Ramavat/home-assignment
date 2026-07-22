@@ -17,8 +17,8 @@ on Uno, fixed by hardware).
 | Component      | Pin      | Arduino Pin |
 |-----------------|---------|-------------|
 | HC-SR04 VCC/GND | —       | 5V / GND |
-| HC-SR04 TRIG    | Trigger | D9 |
-| HC-SR04 ECHO    | Echo    | D10 |
+| HC-SR04 TRIG    | Trigger | A2 |
+| HC-SR04 ECHO    | Echo    | A3 |
 | Buzzer          | +       | D6 (PWM, `tone()`) |
 | Green LED       | Anode   | D2 → 220Ω → GND |
 | Yellow LED      | Anode   | D3 → 220Ω → GND |

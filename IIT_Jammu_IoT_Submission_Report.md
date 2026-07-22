@@ -4,8 +4,8 @@
 
 ## 👤 Student Submission Details
 
-* **Name**: [Please enter your name here]
-* **Contact Number**: [Please enter your contact number here]
+* **Name**: Vraj Ramavat
+* **Contact Number**: 8128680855
 * **Email Address**: ramavatvraj@gmail.com
 * **GitHub Repository Link**: [https://github.com/Vraj-Ramavat/home-assignment](https://github.com/Vraj-Ramavat/home-assignment)
 * **Google Drive Demo Video Folder**: [Google Drive Folder containing all Project Videos](https://drive.google.com/drive/folders/11xXk5HcE5a5OeeX7RsooTPi0qlOb1i7U?usp=sharing)

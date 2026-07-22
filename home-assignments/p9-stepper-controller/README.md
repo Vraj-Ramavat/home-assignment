@@ -1,4 +1,14 @@
-# Project 9: Stepper Motor Precision Positioner
+# ⚙️ Project 9: Stepper Motor Precision Positioner
+
+<div align="center">
+
+[![IIT Jammu Summer School 2026](https://img.shields.io/badge/IIT%20Jammu-Summer%20School%202026-blueviolet?style=for-the-badge&logo=education)](#)
+[![Author](https://img.shields.io/badge/Author-Vraj%20Ramavat-orange?style=for-the-badge&logo=github)](https://github.com/Vraj-Ramavat)
+[![Project](https://img.shields.io/badge/Project-P9-blue?style=for-the-badge)](#)
+[![Platform](https://img.shields.io/badge/Platform-Arduino%20Uno-teal?style=for-the-badge&logo=arduino)](#)
+[![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)](#)
+
+</div>
 
 ## Components Used
 - Arduino Uno R3

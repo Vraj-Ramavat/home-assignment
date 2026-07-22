@@ -58,8 +58,8 @@
 | Light override btn| one leg  | GPIO32 (INPUT_PULLUP), other leg → GND |
 | OLED D0 (SCK)     | Clock    | GPIO18 |
 | OLED D1 (MOSI)    | Data     | GPIO23 |
-| OLED RES          | Reset    | GPIO16 |
-| OLED DC           | Data/Cmd | GPIO17 |
+| OLED RES          | Reset    | GPIO19 |
+| OLED DC           | Data/Cmd | GPIO21 |
 | OLED CS           | Chip Sel | GPIO5 |
 
 ## Libraries

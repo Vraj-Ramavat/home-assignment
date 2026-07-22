@@ -23,8 +23,8 @@ the kit is the 7-pin SPI SSD1306, not the 4-pin I2C one the sheet describes.
 | Red LED           | Anode    | GPIO26 → 220Ω → GND |
 | OLED D0 (SCK)     | Clock    | GPIO18 |
 | OLED D1 (MOSI)    | Data     | GPIO23 |
-| OLED RES          | Reset    | GPIO16 |
-| OLED DC           | Data/Cmd | GPIO17 |
+| OLED RES          | Reset    | GPIO33 |
+| OLED DC           | Data/Cmd | GPIO32 |
 | OLED CS           | Chip Sel | GPIO5 |
 
 ## Libraries

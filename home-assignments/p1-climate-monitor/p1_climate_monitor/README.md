@@ -28,8 +28,8 @@
 | OLED VCC/GND      | —         | 3.3V / GND (never 5V) |
 | OLED D0 (SCK)     | Clock     | GPIO18 (HW SPI) |
 | OLED D1 (MOSI)    | Data      | GPIO23 (HW SPI) |
-| OLED RES          | Reset     | GPIO16 |
-| OLED DC           | Data/Cmd  | GPIO17 |
+| OLED RES          | Reset     | GPIO21 |
+| OLED DC           | Data/Cmd  | GPIO2 |
 | OLED CS           | Chip Sel  | GPIO5 |
 | Red LED           | Anode     | GPIO25 → 220Ω → LED → GND |
 | Green LED         | Anode     | GPIO26 → 220Ω → LED → GND |

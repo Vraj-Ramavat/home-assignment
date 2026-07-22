@@ -20,7 +20,7 @@
 | Component        | Pin       | ESP32 GPIO |
 |-------------------|----------|------------|
 | Soil sensor VCC/GND | —      | 3.3V / GND (never 5V) |
-| Soil sensor AOUT  | Analog   | GPIO34 |
+| Soil sensor AOUT  | Analog   | GPIO35 |
 | DHT22 DATA        | Data     | GPIO4 (10kΩ pull-up to 3.3V) |
 | Relay DC+ (VCC)   | Power    | 5V (Vin) |
 | Relay DC- (GND)   | Ground   | GND |
@@ -29,8 +29,8 @@
 | Push button       | one leg  | GPIO0 (INPUT_PULLUP), other leg → GND |
 | OLED D0 (SCK)     | Clock    | GPIO18 |
 | OLED D1 (MOSI)    | Data     | GPIO23 |
-| OLED RES          | Reset    | GPIO16 |
-| OLED DC           | Data/Cmd | GPIO17 |
+| OLED RES          | Reset    | GPIO14 |
+| OLED DC           | Data/Cmd | GPIO27 |
 | OLED CS           | Chip Sel | GPIO5 |
 
 ## Libraries
